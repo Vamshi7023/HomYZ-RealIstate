@@ -1,6 +1,7 @@
 .r-container {
   overflow: hidden;
   position: relative;
+  
 }
 .r-head {
   margin-bottom: 2rem;
@@ -30,16 +31,7 @@
   width: 15rem;
 }
 
-.r-card:hover {
-  scale: 1.025;
-  cursor: pointer;
-  background: linear-gradient(
-    180deg,
-    rgb(130, 110, 110) 0%,
-    rgb(235, 235, 245)
-  );
-  box-shadow: 0px 70px 50px -50px rgb(162, 152, 152);
-}
+
 .swiper-horizontal {
   overflow: visible;
 }

@@ -1,53 +1,121 @@
+/* Header Wrapper */
 .h-wrapper {
-  /* background-color: black; */
-  color: white;
-  z-index: 99;
+  width: 100%;
+  background: #f7f9fc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
+/* Container */
+.innerWidth {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.paddings {
+  padding: 1rem 0;
+}
+
+.flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Header container */
 .h-container {
+  display: flex;
   justify-content: space-between;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  color: var(--secondary);
-}
-.h-menu {
-  gap: 2rem;
+  align-items: center;
 }
 
-.h-menu > *:hover {
+/* Logo */
+.h-container img {
+  width: 70px;
+  /* reduced size */
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
   cursor: pointer;
 }
-/* .h-menu:hover {
-  background-color: rgb(148, 145, 145) 262;
-} */
-a:hover {
-  padding: 6px;
-  background-color: grey;
-  border-radius: 10px;
+
+/* Navigation menu */
+.h-menu {
+  display: flex;
+  gap: 2rem;
+  transition: all 0.3s ease;
 }
 
+.h-menu a {
+  text-decoration: none;
+  color: #1f1f1f;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  cursor: pointer;
+
+}
+
+.h-menu a:hover {
+  color: #4066ff;
+}
+
+.h-menu .button {
+  padding: 0.5rem 1rem;
+  background-color: #4066ff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.h-menu .button:hover {
+  background-color: #274bdb;
+}
+
+/* Hamburger icon */
 .menu-icon {
   display: none;
+  cursor: pointer;
+  color: #1f1f1f;
+  z-index: 110;
 }
 
-@media (max-width: 768px) {
+/* Responsive Styles */
+@media (max-width: 800px) {
   .menu-icon {
     display: block;
   }
+
   .h-menu {
-    z-index: 99;
-    color: black;
     position: absolute;
-    top: 3rem;
-    right: 4rem;
-    background: white;
+    top: 100%;
+    right: 0;
     flex-direction: column;
-    font-weight: 500;
-    gap: 2rem;
-    padding: 3rem;
-    border-radius: 10px;
+    background-color: white;
+    width: 60%;
+    max-width: 300px;
+    height: auto;
+    padding: 2rem 1rem;
+    border-radius: 10px 0 0 10px;
+    box-shadow: -4px 4px 20px rgba(0, 0, 0, 0.1);
     align-items: flex-start;
-    box-shadow: var(--shadow);
-    transition: all 300ms ease-in;
+    gap: 1.5rem;
+    z-index: 105;
+  }
+
+  .h-menu a {
+    font-size: 1.1rem;
+    width: 100%;
+  }
+
+  .h-menu .button {
+    width: 100%;
+    text-align: center;
   }
 }

@@ -1,23 +1,91 @@
-.f-container {
-  justify-content: space-between;
+.f-wrapper {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  padding: 3rem 1rem;
 }
 
-.f-left {
+.f-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.f-left,
+.f-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   gap: 1rem;
 }
 
-.f-menu {
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+/* Left content */
+.f-logo {
+  width: 100px;
+  border-radius: 10px;
+}
+
+.f-text {
+  color: #d0d0d0;
+  font-size: 0.95rem;
+  max-width: 300px;
+  line-height: 1.5rem;
+}
+
+/* Right content */
+.f-heading {
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
-@media (max-width: 768) {
+.f-location {
+  font-size: 0.95rem;
+  color: #d0d0d0;
+}
+
+.f-menu {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.f-menu span {
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.f-menu span:hover {
+  color: #ffcc70;
+}
+
+/* Utilities */
+.innerWidth {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.paddings {
+  padding: 0 1rem;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
   .f-container {
-    justify-content: center;
-  }
-  .f-container > div {
-    align-items: center !important;
+    flex-direction: column;
     text-align: center;
+    align-items: center;
+  }
+
+  .f-left,
+  .f-right {
+    align-items: center;
+  }
+
+  .f-menu {
+    justify-content: center;
   }
 }
